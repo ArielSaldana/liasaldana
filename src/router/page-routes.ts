@@ -5,7 +5,7 @@ export function PageRoutes(): [] {
         console.log(name);
         return {
             name,
-            path: name === 'Home' ? '/' : `/${name.toLowerCase()}`,
+            path: name.toLowerCase() === 'home' ? '/' : `/${name.toLowerCase()}`,
             // $ts-ignore
             component: pages[path].default as React.Component
         }
