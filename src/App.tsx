@@ -1,4 +1,4 @@
-import './App.css'
+import './App.scss'
 import './router/router.tsx'
 import Router from "./router/router.tsx";
 
