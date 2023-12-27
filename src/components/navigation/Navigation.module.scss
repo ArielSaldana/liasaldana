@@ -1,0 +1,22 @@
+div.navigation {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+  box-sizing: border-box;
+  background: white;
+
+}
+
+div.logo-wrapper {
+  color: black;
+}
+
+nav.nav-links {
+
+}
+
+nav.nav-links a {
+  margin-left: 30px;
+}
