@@ -1,0 +1,23 @@
+div.homepage-hero {
+  //width: 100%;
+  //height:500px;
+  max-height: 800px;
+  background: pink;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+div.homepage-hero .content-wrapper {
+  width: 100%;
+  color: black;
+  padding: 400px 40px 40px;
+}
+
+div.homepage-hero .content-wrapper h1 {
+
+}
+
+div.homepage-hero .content-wrapper p {
+  font-size: 26px;
+}
