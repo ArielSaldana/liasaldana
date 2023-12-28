@@ -6,7 +6,7 @@ export default function Navigation() {
     return (
         <div className={styles.navigation}>
             <div className={styles.logoWrapper}>
-                <span>Lia</span>
+                <span></span>
             </div>
             <nav className={styles.navLinks}>
                 {links.map(link => (

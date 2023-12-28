@@ -6,18 +6,58 @@ div.homepage-hero {
   display: flex;
   justify-content: center;
   align-content: center;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 25px;
+  z-index: 0;
+}
+
+div.homepage-hero:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  border-radius: 0%;
+  background: /* older syntax */
+          -webkit-radial-gradient(50% 0, circle,
+                  rgba(255, 0, 0, .5), rgba(255, 0, 0, 0) 70.71%),
+          -webkit-radial-gradient(6.7% 75%, circle,
+                  rgba(0, 0, 255, .5), rgba(0, 0, 255, 0) 70.71%),
+          -webkit-radial-gradient(93.3% 75%, circle,
+                  rgba(0, 255, 0, .5), rgba(0, 255, 0, 0) 70.71%);
+  background: /* newest syntax */
+          radial-gradient(circle at 50% 0,
+                  rgba(255, 0, 0, .5), rgba(255, 0, 0, 0) 70.71%),
+          radial-gradient(circle at 6.7% 75%,
+                  rgba(0, 0, 255, .5), rgba(0, 0, 255, 0) 70.71%),
+          radial-gradient(circle at 93.3% 75%,
+                  rgba(0, 255, 0, .5), rgba(0, 255, 0, 0) 70.71%);
+  border-radius: 25px;
 }
 
 div.homepage-hero .content-wrapper {
   width: 100%;
   color: black;
   padding: 400px 40px 40px;
+  z-index: 10;
 }
 
 div.homepage-hero .content-wrapper h1 {
-
+  margin-bottom: 60px;
 }
 
 div.homepage-hero .content-wrapper p {
   font-size: 26px;
+  max-width: 700px;
+}
+
+div.homepage-hero .content-wrapper p span {
+  color: #E9E6AF;
 }
