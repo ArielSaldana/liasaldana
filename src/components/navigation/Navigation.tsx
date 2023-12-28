@@ -8,7 +8,9 @@ export default function Navigation() {
         <div className={styles.navigation}>
             <div className={styles.logoWrapper}>
                 <span>
-                    <LogoIcon></LogoIcon>
+                    <a href={"/"}>
+                        <LogoIcon></LogoIcon>
+                    </a>
                 </span>
             </div>
             <nav className={styles.navLinks}>
