@@ -1,13 +1,20 @@
 div.cards-list {
-
+  text-align: center;
 }
 
 div.cards-list .title {
-
+  width: 100%;
+  text-align: center;
 }
 
 div.cards-list .title h3 {
 
+}
+
+div.cards-list h3,
+div.cards-list h4,
+div.cards-list p {
+  color: black;
 }
 
 div.list-wrapper {
@@ -15,19 +22,20 @@ div.list-wrapper {
 }
 
 div.list-wrapper ol {
-
+  display: flex;
+  flex-wrap: wrap;
 }
 
 div.list-wrapper ol li {
-
+  width: 50%;
 }
 
 div.list-wrapper ol li .card {
-
+  //padding: 80px;
+  text-align: center;
 }
 
 div.list-wrapper ol li .card h4 {
-
 }
 
 div.list-wrapper ol li .card p {
