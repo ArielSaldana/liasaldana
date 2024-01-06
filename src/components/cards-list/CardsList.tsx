@@ -5,7 +5,7 @@ import {useRef} from "react";
 
 export default function CardsList() {
     const changeDistance = 50;
-    const cardsListRef = useRef(null);
+    const cardsListRef = useRef<HTMLDivElement>(null);
     useLenis(({ scroll}) => {
         const cardsList = cardsListRef.current;
         if (scroll > changeDistance) {

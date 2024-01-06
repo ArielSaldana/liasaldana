@@ -3,6 +3,7 @@ import './router/router.tsx'
 import Router from "./router/router.tsx";
 import { ReactLenis } from "@studio-freight/react-lenis";
 import GlassPane from "./components/glass-pane/GlassPane.tsx";
+import {Scrollbar} from "./components/scrollbar/ScrollBar.tsx";
 
 function App() {
     // const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
             infinite: false,
         }}>
             <GlassPane></GlassPane>
+            <Scrollbar></Scrollbar>
             <div className="App">
                 {/*<NavigationBar></NavigationBar>*/}
                 <Router/>

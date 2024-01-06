@@ -4,15 +4,17 @@ import {useRef} from "react";
 
 export default function Hero() {
     const changeDistance = 50;
-    const heroRef = useRef(null);
-    useLenis(({ scroll}) => {
+    const heroRef = useRef<HTMLDivElement>(null);
+
+    useLenis(({scroll}) => {
         const hero = heroRef.current;
         if (scroll > changeDistance) {
             hero!.classList.add(styles.active);
         } else {
             hero!.classList.remove(styles.active);
         }
-    })
+    });
+
     return (
         <div ref={heroRef} className={styles.homepageHero}>
             <div className={styles.contentWrapper}>

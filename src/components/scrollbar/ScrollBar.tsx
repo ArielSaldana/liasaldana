@@ -1,10 +1,10 @@
 import { useRect } from '@studio-freight/hamo'
 import { useLenis } from '@studio-freight/react-lenis'
 import { useEffect, useRef } from 'react'
-import s from './scrollbar.module.scss'
+import s from './ScrollBar.module.scss'
 
 export function Scrollbar() {
-    const thumbRef = useRef()
+    const thumbRef = useRef<HTMLDivElement>(null)
     const lenis = useLenis()
     const [innerMeasureRef, { height: innerHeight }] = useRect()
     const [thumbMeasureRef, { height: thumbHeight }] = useRect()
@@ -17,7 +17,7 @@ export function Scrollbar() {
         ({ scroll, limit }) => {
             const progress = scroll / limit
 
-            thumbRef.current.style.transform = `translate3d(0,${
+            thumbRef.current!.style.transform = `translate3d(0,${
                 progress * (innerHeight - thumbHeight)
             }px,0)`
         },
