@@ -1,6 +1,8 @@
-import { useRect } from '@studio-freight/hamo'
-import { useLenis } from '@studio-freight/react-lenis'
-import { useEffect, useRef } from 'react'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { useRect } from "@studio-freight/hamo"
+import { useLenis } from "@studio-freight/react-lenis"
+import { useEffect, useRef } from "react"
 import s from './ScrollBar.module.scss'
 
 export function Scrollbar() {
@@ -41,7 +43,7 @@ export function Scrollbar() {
             lenis.scrollTo(scroll, { immediate: true })
         }
 
-        function onPointerDown(e) {
+        function onPointerDown(e: { offsetY: number | null }) {
             start = e.offsetY
         }
 
@@ -58,17 +60,21 @@ export function Scrollbar() {
             window.removeEventListener('pointermove', onPointerMove, false)
             window.removeEventListener('pointerup', onPointerUp, false)
         }
-    }, [lenis, innerHeight])
+    }, [lenis, innerHeight]);
+
+    // workaround to update
+    useEffect(() => {
+        if (thumbRef.current) {
+            thumbMeasureRef(thumbRef.current);
+        }
+    }, [thumbRef.current, thumbMeasureRef]);
 
     return (
         <div className={s.scrollbar}>
             <div ref={innerMeasureRef} className={s.inner}>
                 <div
                     className={s.thumb}
-                    ref={(node) => {
-                        thumbRef.current = node
-                        thumbMeasureRef(node)
-                    }}
+                    ref={thumbRef}
                 />
             </div>
         </div>
