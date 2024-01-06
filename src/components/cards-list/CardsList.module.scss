@@ -1,5 +1,17 @@
 div.cards-list {
   text-align: center;
+  padding-top: 88px;
+  padding-bottom: 88px;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  transition-delay: 0s;
+  transform: translateY(-20px);
+}
+
+div.cards-list.visible {
+  opacity: 100%;
+  transform: translateY(0px);
+  transition-delay: .2s;
 }
 
 div.cards-list .title {
@@ -8,7 +20,7 @@ div.cards-list .title {
 }
 
 div.cards-list .title h3 {
-
+  margin-bottom: 88px;
 }
 
 div.cards-list h3,
@@ -28,16 +40,42 @@ div.list-wrapper ol {
 
 div.list-wrapper ol li {
   width: 50%;
+  box-sizing: border-box;
+  padding-left: 88px;
+  padding-right: 88px;
+  margin-bottom: 88px;
 }
+
+div.list-wrapper ol li:nth-child(even) {
+  padding-left: 44px;
+}
+
+div.list-wrapper ol li:nth-child(odd) {
+  padding-right: 44px;
+}
+
+
 
 div.list-wrapper ol li .card {
   //padding: 80px;
   text-align: center;
 }
 
+div.list-wrapper ol li .card img {
+  width: 100%;
+}
+
+div.list-wrapper ol li .card h4,
+div.list-wrapper ol li .card p {
+  text-align: left;
+}
+
 div.list-wrapper ol li .card h4 {
+  font-size: 26px;
+  margin-bottom: 16px;
+  margin-top: 20px;
 }
 
 div.list-wrapper ol li .card p {
-
+  font-size: 20px;
 }
