@@ -2,7 +2,6 @@ import './App.scss'
 import './router/router.tsx'
 import Router from "./router/router.tsx";
 import { ReactLenis } from "@studio-freight/react-lenis";
-import GlassPane from "./components/glass-pane/GlassPane.tsx";
 import {Scrollbar} from "./components/scrollbar/ScrollBar.tsx";
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
             touchMultiplier: 2,
             infinite: false,
         }}>
-            <GlassPane></GlassPane>
             <Scrollbar></Scrollbar>
             <div className="App">
                 {/*<NavigationBar></NavigationBar>*/}
