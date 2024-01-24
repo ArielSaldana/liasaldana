@@ -1,0 +1,11 @@
+@import "variables";
+
+@mixin navigation-padding {
+  padding: $navigationHorizontalPadding;
+}
+
+@mixin padded-wrapper-style {
+  padding: 0 $wrapperHorizontalPadding;
+  max-width: $wrapperMaxWidth;
+  margin: 0 auto;
+}

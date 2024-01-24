@@ -1,0 +1,17 @@
+@import "../../scss/mixins";
+
+.large-image-display {
+  display: block;
+}
+
+.large-image-display .wrapper {
+  //padding: 30px;
+  @include padded-wrapper-style;
+}
+
+.large-image-display .wrapper .content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

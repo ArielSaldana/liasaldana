@@ -1,12 +1,16 @@
+@import "../../scss/mixins";
+
+
 div.navigation {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 30px;
   box-sizing: border-box;
   position: fixed;
-  //background: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  @include navigation-padding;
 }
 
 div.logo-wrapper {

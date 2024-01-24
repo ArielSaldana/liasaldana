@@ -8,9 +8,13 @@ export default function BreadcrumbMenu() {
 
     return (
         <div className={styles.breadcrumbMenu}>
-            <ol>
-                <li><a href={"/"}><span>Home</span></a></li>
-            </ol>
+            <div className={styles.wrapper}>
+                <div className={styles.content}>
+                    <ol>
+                        <li><a href={"/"}><span>Home</span></a></li>
+                    </ol>
+                </div>
+            </div>
         </div>
     )
 }

@@ -1,3 +1,46 @@
+@import "../../scss/mixins";
+
 .breadcrumb-menu {
   display: block;
+  margin-bottom: 30px;
+}
+
+.breadcrumb-menu .wrapper {
+  @include padded-wrapper-style;
+  margin-top:10px;
+  margin-bottom:60px;
+}
+
+.breadcrumb-menu .wrapper .content {
+  padding-left: 30px;
+  position: relative;
+  font-size: 20px;
+  color: black;
+}
+
+.breadcrumb-menu .wrapper .content a {
+  color: inherit; /* Makes the link color the same as the parent text color */
+  text-decoration: none; /* Removes underline from links */
+  font-style: normal; /* Resets italicized style, if any */
+  font-weight: normal; /* Resets bold style, if any */
+  background: none; /* Resets any background styles */
+  outline: none; /* Removes outline that might be shown on focus */
+  cursor: pointer; /* Ensures the cursor appears as a pointer */
+
+  /* Additional resets or custom styles as needed */
+}
+
+.breadcrumb-menu .wrapper .content::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0px;
+  background-image: url('@/assets/icons/leftarrowcircle.svg'); /* Add this line */
+  background-repeat: no-repeat; /* Optional: Prevents the image from repeating */
+  background-position: left center;
+}
+
+.left-arrow {
+
 }
