@@ -1,11 +1,15 @@
 import styles from "./LargeImageDisplay.module.scss";
-import unrealWalletImage from "@/assets/unreal_wallet_preview.jpeg";
-export default function LargeImageDisplay() {
+
+interface LargeImageDisplayProps {
+    image: string,
+    altText: string
+}
+export default function LargeImageDisplay(props: LargeImageDisplayProps) {
     return (
         <div className={styles.largeImageDisplay}>
             <div className={styles.wrapper}>
                 <div className={styles.content}>
-                    <img src={unrealWalletImage} alt="unreal wallet"/>
+                    <img src={props.image} alt={props.altText}/>
                 </div>
             </div>
         </div>

@@ -1,0 +1,50 @@
+@use "sass:math";
+
+$mobile-breakpoint: 768px;
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    float: left;
+    width: math.div(100%, 12) * $i;
+    box-sizing: border-box;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  @for $i from 1 through 12 {
+    .mobile-col-#{$i} {
+      float: left;
+      width: math.div(100%, 12) * $i;
+      box-sizing: border-box;
+      padding: 0 15px;
+    }
+  }
+}
+
+//@mixin grid-columns {
+//  @for $i from 1 through 12 {
+//    .col-#{$i} {
+//      float: left;
+//      width: math.div(100%, 12) * $i;
+//      box-sizing: border-box;
+//      padding: 0 15px;
+//    }
+//
+//    @media (max-width: $mobile-breakpoint) {
+//      .mobile-col-#{$i} {
+//        float: left;
+//        width: math.div(100%, 12) * $i;
+//        box-sizing: border-box;
+//        padding: 0 15px;
+//      }
+//    }
+//  }
+//}
+
+// Clearfix for floated elements
+.grid::after {
+  content: "";
+  display: table;
+  clear: both;
+}

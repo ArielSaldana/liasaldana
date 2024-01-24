@@ -1,22 +1,22 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import { useRect } from "@studio-freight/hamo"
-import { useLenis } from "@studio-freight/react-lenis"
-import { useEffect, useRef } from "react"
+import {useRect} from "@studio-freight/hamo"
+import {useLenis} from "@studio-freight/react-lenis"
+import {useEffect, useRef} from "react"
 import s from './ScrollBar.module.scss'
 
 export function Scrollbar() {
     const thumbRef = useRef<HTMLDivElement>(null)
     const lenis = useLenis()
-    const [innerMeasureRef, { height: innerHeight }] = useRect()
-    const [thumbMeasureRef, { height: thumbHeight }] = useRect()
+    const [innerMeasureRef, {height: innerHeight}] = useRect()
+    const [thumbMeasureRef, {height: thumbHeight}] = useRect()
 
     function mapRange(in_min: number, in_max: number, input: number, out_min: number, out_max: number) {
         return ((input - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
     }
 
     useLenis(
-        ({ scroll, limit }) => {
+        ({scroll, limit}) => {
             const progress = scroll / limit
 
             thumbRef.current!.style.transform = `translate3d(0,${
@@ -40,7 +40,7 @@ export function Scrollbar() {
                 0,
                 lenis.limit,
             )
-            lenis.scrollTo(scroll, { immediate: true })
+            lenis.scrollTo(scroll, {immediate: true})
         }
 
         function onPointerDown(e: { offsetY: number | null }) {
@@ -72,10 +72,7 @@ export function Scrollbar() {
     return (
         <div className={s.scrollbar}>
             <div ref={innerMeasureRef} className={s.inner}>
-                <div
-                    className={s.thumb}
-                    ref={thumbRef}
-                />
+                <div className={s.thumb} ref={thumbRef}/>
             </div>
         </div>
     )

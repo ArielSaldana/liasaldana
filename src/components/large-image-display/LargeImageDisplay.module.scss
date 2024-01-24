@@ -5,7 +5,6 @@
 }
 
 .large-image-display .wrapper {
-  //padding: 30px;
   @include padded-wrapper-style;
 }
 
@@ -14,4 +13,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 80px;
+}
+
+.large-image-display .wrapper .content img {
+  width: inherit;
 }

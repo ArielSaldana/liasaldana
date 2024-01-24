@@ -9,3 +9,10 @@
   max-width: $wrapperMaxWidth;
   margin: 0 auto;
 }
+
+@mixin title-font {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 0.057rem;
+}
