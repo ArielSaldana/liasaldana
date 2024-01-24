@@ -1,3 +1,6 @@
+@import "../../scss/mixins";
+
+
 div.cards-list {
   text-align: center;
   padding-top: 88px;
@@ -30,7 +33,7 @@ div.cards-list p {
 }
 
 div.list-wrapper {
-
+  @include padded-wrapper-style;
 }
 
 div.list-wrapper ol {

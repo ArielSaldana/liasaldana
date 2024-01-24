@@ -15,6 +15,7 @@ export default function TedCountdown() {
                 <BreadcrumbMenu/>
                 <main>
                     <LargeImageDisplay image={tedThumbnail} altText={"ted thumbnail"}/>
+                    {/*<LargeImageDisplay image={exampleThumbnail} altText={"ted thumbnail"}/>*/}
                     <CaseDescription title={"TED - COUNTDOWN"} description={[
                         "Countdown is a global initiative to champion and accelerate solutions to the climate crisis, turning ideas into action.",
                         "TED engaged us to make 5 spots about the urgency of combatting climate change, to be produced in the similarly urgent timeline of 4 weeks, just in time for their global countdown event.",
