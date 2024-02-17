@@ -6,6 +6,7 @@ const links = ["About", "Contact", "Playground"];
 export default function Navigation() {
     return (
         <div className={styles.navigation}>
+            <div className={styles.background}/>
             <div className={styles.logoWrapper}>
                 <span>
                     <a href={"/"}>

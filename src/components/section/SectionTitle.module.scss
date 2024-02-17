@@ -6,8 +6,12 @@
 
 .section-title .wrapper {
   @include padded-wrapper-style;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .section-title .wrapper h3 {
   color: black;
+  font-size: 60px;
+  font-weight: 600;
 }
