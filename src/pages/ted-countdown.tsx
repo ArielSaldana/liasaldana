@@ -21,7 +21,6 @@ export default function TedCountdown() {
                         "TED engaged us to make 5 spots about the urgency of combatting climate change, to be produced in the similarly urgent timeline of 4 weeks, just in time for their global countdown event.",
                         "The spots were broadcast as part of the live event to 67 million viewers, and introduced by Mark Rufalo, Al Gore and Jane Fonda.",
                     ]}/>
-
                 </main>
             </div>
         </>
