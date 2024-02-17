@@ -11,10 +11,10 @@ export default function CaseDescription(props: CaseDescriptionProps) {
         <div className={styles.caseDescription}>
             <div className={styles.wrapper}>
                 <div className={`${styles.content} ${gridSystem.grid}`}>
-                    <div className={`${styles.left} ${styles.card} ${gridSystem.col4}`}>
+                    <div className={`${styles.left} ${styles.card} ${gridSystem.col4} ${gridSystem.mobileCol12}`}>
                         <h4>{props.title}</h4>
                     </div>
-                    <div className={`${styles.right} ${styles.card} ${gridSystem.col8}`}>
+                    <div className={`${styles.right} ${styles.card} ${gridSystem.col8} ${gridSystem.mobileCol12}`}>
                         {props.description.map((desc, index) => (
                             <p key={index}>{desc}</p> // Iterate over the description array
                         ))}

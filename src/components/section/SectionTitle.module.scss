@@ -12,6 +12,10 @@
 
 .section-title .wrapper h3 {
   color: black;
-  font-size: 60px;
+  font-size: 30px;
   font-weight: 600;
+
+  @include min-tablet {
+    font-size: 60px;
+  }
 }

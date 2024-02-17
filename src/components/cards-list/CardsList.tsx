@@ -6,7 +6,7 @@ import {useRef} from "react";
 export default function CardsList() {
     const changeDistance = 50;
     const cardsListRef = useRef<HTMLDivElement>(null);
-    useLenis(({ scroll}) => {
+    useLenis(({scroll}) => {
         const cardsList = cardsListRef.current;
         if (scroll > changeDistance) {
             cardsList!.classList.add(styles.visible);
@@ -22,28 +22,31 @@ export default function CardsList() {
             <div className={styles.listWrapper}>
                 <ol>
                     <li>
-                        <div className={styles.card}>
-                            <img src={unrealImage} alt="Unreal"/>
-                            <h4>Unreal</h4>
-                            <p>A crypto currency app that does it all</p>
-                        </div>
+                        <a href={"/unreal"}>
+                            <div className={styles.card}>
+                                <img src={unrealImage} alt="Unreal"/>
+                                <h4>Unreal</h4>
+                                <p>A crypto currency app that does it all</p>
+                            </div>
+                        </a>
+
                     </li>
 
-                    <li>
-                        <div className={styles.card}>
-                            <img src={unrealImage} alt="Unreal"/>
-                            <h4>Unreal</h4>
-                            <p>A crypto currency app that does it all</p>
-                        </div>
-                    </li>
+                    {/*<li>*/}
+                    {/*    <div className={styles.card}>*/}
+                    {/*        <img src={unrealImage} alt="Unreal"/>*/}
+                    {/*        <h4>Unreal</h4>*/}
+                    {/*        <p>A crypto currency app that does it all</p>*/}
+                    {/*    </div>*/}
+                    {/*</li>*/}
 
-                    <li>
-                        <div className={styles.card}>
-                            <img src={unrealImage} alt="Unreal"/>
-                            <h4>Unreal</h4>
-                            <p>A crypto currency app that does it all</p>
-                        </div>
-                    </li>
+                    {/*<li>*/}
+                    {/*    <div className={styles.card}>*/}
+                    {/*        <img src={unrealImage} alt="Unreal"/>*/}
+                    {/*        <h4>Unreal</h4>*/}
+                    {/*        <p>A crypto currency app that does it all</p>*/}
+                    {/*    </div>*/}
+                    {/*</li>*/}
                 </ol>
             </div>
         </div>

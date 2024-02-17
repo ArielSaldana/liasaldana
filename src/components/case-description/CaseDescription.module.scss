@@ -10,9 +10,14 @@
 
 .case-description .wrapper .content {
   display: flex;
+  flex-flow: column;
   justify-content: center;
   grid-column-gap: 2.344vw;
   margin-bottom:60px;
+
+  @include min-tablet {
+    flex-flow: row;
+  }
 }
 
 .case-description .wrapper .content .card {
@@ -23,6 +28,12 @@
 
 .case-description .wrapper .content .card h4 {
   @include title-font;
+  margin-bottom: 20px;
+
+  @include min-tablet {
+    flex-flow: row;
+    margin-bottom: inherit;
+  }
 }
 
 .case-description .wrapper .content .card p {

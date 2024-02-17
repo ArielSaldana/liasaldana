@@ -19,7 +19,7 @@ export default function Hero() {
         <div ref={heroRef} className={styles.homepageHero}>
             <div className={styles.contentWrapper}>
                 <h1>Hi, I'm <span><em>Lia Saldana</em></span><br/>A Product Designer <br/>Located in New York City.</h1>
-                <p>Currently curious about web 3.0 and how to make it accessible to non-technical users.</p>
+                <p>I am a meticulous UX designer, passionate about crafting pixel-perfect interfaces and user-centric experiences. My approach is data-driven, leveraging user research and analytics to inform every design decision. </p>
             </div>
         </div>
     )

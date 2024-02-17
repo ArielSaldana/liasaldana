@@ -1,7 +1,9 @@
 import styles from "./Navigation.module.scss";
 import {ReactComponent as LogoIcon} from '../../assets/lialogo.svg'
 
-const links = ["About", "Contact", "Playground"];
+// const links = ["About", "Contact", "Playground"];
+// const links = ["About"];
+const links: string[] = [];
 
 export default function Navigation() {
     return (

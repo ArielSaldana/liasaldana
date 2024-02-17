@@ -5,9 +5,13 @@
 }
 
 @mixin padded-wrapper-style {
-  padding: 0 $wrapperHorizontalPadding;
-  max-width: $wrapperMaxWidth;
+
   margin: 0 auto;
+
+  @media (min-width: 780px) {
+    padding: 0 $wrapperHorizontalPadding;
+    max-width: $wrapperMaxWidth;
+  }
 }
 
 @mixin title-font {
@@ -15,4 +19,25 @@
   font-size: 25px;
   font-weight: 600;
   letter-spacing: 0.057rem;
+}
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin min-tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
 }
