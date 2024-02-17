@@ -1,0 +1,13 @@
+@import "../../scss/mixins";
+
+.section-title {
+  display: block;
+}
+
+.section-title .wrapper {
+  @include padded-wrapper-style;
+}
+
+.section-title .wrapper h3 {
+  color: black;
+}
